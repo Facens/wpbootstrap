@@ -30,7 +30,7 @@
 		<?php endif; ?>
 			
 		<?php
-			if( $sa_settings['credits'] == 'true' ) : 
+			if( $sa_settings['credits'] == true ) : 
 		?>
 	
 			<div style="float: right">		
