@@ -1,0 +1,165 @@
+/* wp-bootstrap-less
+ * Custom styles for the Wordpress theme
+ * ------------------------------------------------------------- */
+
+
+// ARTICLES
+// -----------
+
+article+article {
+margin-top: 80px;
+}
+
+.post_content {
+padding: ( @baseline * 0.7 ) 0 @baseline 0;
+	h2 {
+	margin-top: @baseline;
+	}
+	h3 {
+	margin-bottom: @baseline * 0.5;
+	}
+	img.box {
+	margin: 0 10px 10px 0;
+	}
+}
+
+.author_box {
+	img {
+	float: left;
+	margin-right: 15px;
+	}
+	h2 {
+	font-size: @basefont + 2;
+	margin-bottom: 0;
+	}
+	margin: 40px 0 40px 0;
+}
+
+// COMMENTS
+// -----------
+
+.comment {
+margin: 20px 0 40px 0;
+	.vcard {
+		img {
+		.box();
+		}
+	}
+	.comment-author {
+	}
+	.comment-container {
+	}
+}
+.comment-reply-link {
+	.btn();
+}
+
+.comment-form-comment {
+	textarea {
+	width: 630px;
+	height: 150px;
+	}
+}
+.form-submit {
+	#submit {
+	.btn();
+	.primary();
+	}
+}
+.form-allowed-tags {
+.help-block();
+.muted();
+}
+#comments-title {
+margin-bottom: @baseline * 0.5;
+}
+
+// FORMS
+// -----------
+
+#search {
+width: 176px;
+}
+
+// VAR
+// -----------
+
+.post_social_buttons {
+float: right;
+padding: 4px 0;
+}
+
+.box {
+@shadow: 0 1px 2px rgba(0,0,0,.25);
+.box-shadow(@shadow);
+.border-radius(3px);
+padding: 5px;
+}
+
+//main navigation
+#access {
+	ul {
+	margin-left: 0;
+	}
+}
+
+//tweak for avoiding too much code
+.pills li.current_page_item a {
+background: @linkColor;
+color: #fff;
+text-shadow: 0 1px 1px rgba(0,0,0,.25);
+}
+
+.tabs li.current_page_item a {
+background-color: #fff;
+padding: 0 14px;
+border: 1px solid #ccc;
+border-bottom: 0;
+color: @gray;
+}
+
+
+footer {
+margin-bottom: 40px;
+}
+
+.hero-unit {
+	h1 a {
+	text-decoration: none;
+		&:hover:after {
+		content: " get to the blog home";
+		font-size: @basefont;
+		color: @gray;
+		font-weight: normal;
+		}
+	}
+}
+
+.box_count {
+float: left;
+margin-right: 30px;
+	&:first-child { //makes facebook look better positioned
+		margin-right: 15px;
+	}
+}
+
+.sidebar {
+	h3 {
+	margin-bottom: @baseline * 0.5;
+	}
+	> li {
+	margin-bottom: 20px;
+	}
+}
+
+// Gallery
+
+.gallery-item {
+width: 160px;
+float: left;
+margin: 0 10px 10px 0;
+	img {
+	.box();
+	}
+}
+

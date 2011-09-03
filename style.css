@@ -1,0 +1,11 @@
+/*
+Theme Name: Bootstrap for Wordpress
+Theme URI: http://bootstrap.iubenda.com
+Description: Wordpress theme based on the Twitter Bootstrap bundle
+Version: 0.1
+Author: Andrea Giannangelo
+Author URI: http://twitter.com/Facens
+Tags: twitter, bootstrap
+*/
+
+@import "css/bootstrap.css";
