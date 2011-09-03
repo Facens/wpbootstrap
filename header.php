@@ -5,8 +5,8 @@
  * Displays all of the <head> section and everything up till <div id="main">
  *
  * @package WordPress
- * @subpackage Starkers
- * @since Starkers 3.0
+ * @subpackage wpbootstrap
+ * @since wpbootstrap 0.1
  */
 ?>
 <!DOCTYPE html>

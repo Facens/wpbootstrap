@@ -4,6 +4,7 @@
 $sa_options = array(
 	'social_buttons' => false,
 	'sidebar_feed' => true,
+	'credits' => true,
 	'compact_homepage' => false,
 	'nav_view' => 'pills',
 	'iubenda_id' => '',
@@ -131,6 +132,14 @@ function sa_theme_options_page() {
 	</td>
 	</tr>
 
+	<tr valign="top"><th scope="row">Credits</th>
+	<td>
+	<p>
+		<input type="checkbox" id="credits" name="sa_options[credits]" value="1" <?php checked( true, $settings['credits'] ); ?> />
+		<label for="credits">Enable the credits on the footer</label>
+	</p>
+	</td>
+	</tr>
 
 	</table>
 
@@ -153,6 +162,12 @@ function sa_validate_options( $input ) {
 		$input['social_buttons'] = null;
 	// We verify if the input is a boolean value
 	$input['social_buttons'] = ( $input['social_buttons'] == 1 ? 1 : 0 );
+
+	// If the checkbox has not been checked, we void it
+	if ( ! isset( $input['credits'] ) )
+		$input['credits'] = null;
+	// We verify if the input is a boolean value
+	$input['credits'] = ( $input['credits'] == 1 ? 1 : 0 );
 
 	// If the checkbox has not been checked, we void it
 	if ( ! isset( $input['sidebar_feed'] ) )

@@ -8,8 +8,8 @@
  * located in the functions.php file.
  *
  * @package WordPress
- * @subpackage Starkers
- * @since Starkers 3.0
+ * @subpackage wpbootstrap
+ * @since wpbootstrap 0.1
  */
 ?>
 

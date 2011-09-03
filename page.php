@@ -8,8 +8,8 @@
  * different template.
  *
  * @package WordPress
- * @subpackage Starkers
- * @since Starkers 3.0
+ * @subpackage wpbootstrap
+ * @since wpbootstrap 0.1
  */
 
 get_header(); ?>

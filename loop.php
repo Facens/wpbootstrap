@@ -14,8 +14,8 @@
  * <code>get_template_part( 'loop', 'index' );</code>
  *
  * @package WordPress
- * @subpackage Starkers
- * @since Starkers 3.0
+ * @subpackage wpbootstrap
+ * @since wpbootstrap 0.1
  */
 ?>
 <?php 
