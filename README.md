@@ -1,4 +1,4 @@
-# wpbootstrap
+# Bootstrap for Wordpress
 Bootstrap Wordpress Theme based on the Twitter Bootstrap toolkit
 
 ## Demo
@@ -14,3 +14,6 @@ The author is [Andrea Giannangelo](http://twitter.com/Facens), founder of [iuben
 ## How to say thanks
 * Be sure to check out [iubenda](http://www.iubenda.com) to generate a privacy policy for your blog
 * Follow the author, [@Facens](http://twitter.com/Facens)
+
+## License
+You are free to use the theme and to commit improvements.
