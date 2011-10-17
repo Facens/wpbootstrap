@@ -452,3 +452,15 @@ function custom_password_form() {
 	return $o;
 }
 
+// Loads scripts
+function wpbootstrap_scripts() {
+   wp_register_script('jquery-tablesorter',
+       get_template_directory_uri() . '/js/jquery/jquery.tablesorter.min.js',
+       array('jquery'),
+       '2.0.5' );
+   
+   wp_enqueue_script('jquery-tablesorter');
+}
+
+add_action('wp_enqueue_scripts', 'wpbootstrap_scripts');
+
