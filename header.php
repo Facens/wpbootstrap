@@ -33,7 +33,6 @@
 
 		<link href="<?php bloginfo('template_directory'); ?>/js/google-code-prettify/prettify.css" rel="stylesheet">
 
-    <script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
     <script src="http://autobahn.tablesorter.com/jquery.tablesorter.min.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/google-code-prettify/prettify.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/application.js"></script>
