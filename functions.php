@@ -454,12 +454,23 @@ function custom_password_form() {
 
 // Loads scripts
 function wpbootstrap_scripts() {
-   wp_register_script('jquery-tablesorter',
-       get_template_directory_uri() . '/js/jquery/jquery.tablesorter.min.js',
-       array('jquery'),
-       '2.0.5' );
-   
-   wp_enqueue_script('jquery-tablesorter');
+	wp_register_script('jquery-tablesorter',
+		get_template_directory_uri() . '/js/jquery/jquery.tablesorter.min.js',
+		array('jquery'),
+		'2.0.5' );
+	
+	wp_enqueue_script('jquery-tablesorter');
+	
+	wp_register_script('google-code-prettify',
+		get_template_directory_uri() . '/js/google-code-prettify/prettify.js');
+	
+	wp_enqueue_script('google-code-prettify');
+	
+	wp_register_script('wpbootstrap-application',
+		get_template_directory_uri() . '/js/application.js',
+		array('jquery-tablesorter'));
+	
+	wp_enqueue_script('wpbootstrap-application');
 }
 
 add_action('wp_enqueue_scripts', 'wpbootstrap_scripts');
