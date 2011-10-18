@@ -31,15 +31,10 @@
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-		<link href="<?php bloginfo('template_directory'); ?>/js/google-code-prettify/prettify.css" rel="stylesheet">
-
-<<<<<<< HEAD
-=======
-    <script src="http://autobahn.tablesorter.com/jquery.tablesorter.min.js"></script>
-    <script src="<?php bloginfo('template_directory'); ?>/js/google-code-prettify/prettify.js"></script>
-    <script src="<?php bloginfo('template_directory'); ?>/js/application.js"></script>
-
->>>>>>> Removed loading of jQuery 1.5.2 as it's already loaded by WP
+	<link href="<?php bloginfo('template_directory'); ?>/js/google-code-prettify/prettify.css" rel="stylesheet">
+	<script src="<?php bloginfo('template_directory'); ?>/js/jquery/jquery.tablesorter.min.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/google-code-prettify/prettify.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/application.js"></script>
 <?php
 	/* We add some JavaScript to pages with the comment form
 	 * to support sites with threaded comments (when in use).
