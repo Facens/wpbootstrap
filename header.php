@@ -50,10 +50,6 @@
 	wp_head();
 ?>
 
-	<script src="<?php bloginfo('template_directory'); ?>/js/jquery/jquery.tablesorter.min.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/js/google-code-prettify/prettify.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/js/application.js"></script>
-
 </head>
 
 <body <?php body_class(); ?>>
