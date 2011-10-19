@@ -23,22 +23,22 @@
 
 	?>
 	</title>
-<link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-
-<!--[if lt IE 9]>
-  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	
+	<!--[if lt IE 9]>
+	  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 
 	<link href="<?php bloginfo('template_directory'); ?>/js/google-code-prettify/prettify.css" rel="stylesheet">
-	<script src="<?php bloginfo('template_directory'); ?>/js/jquery/jquery.tablesorter.min.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/js/google-code-prettify/prettify.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/js/application.js"></script>
+	
 <?php
 	/* We add some JavaScript to pages with the comment form
 	 * to support sites with threaded comments (when in use).
+	 * Loading JQuery too
 	 */
+	wp_enqueue_script( 'jquery' );
 	if ( is_singular() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );
 
@@ -49,6 +49,11 @@
 	 */
 	wp_head();
 ?>
+
+	<script src="<?php bloginfo('template_directory'); ?>/js/jquery/jquery.tablesorter.min.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/google-code-prettify/prettify.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/application.js"></script>
+
 </head>
 
 <body <?php body_class(); ?>>
