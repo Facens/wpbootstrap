@@ -7,10 +7,10 @@
  * @since wpbootstrap 0.1
  */
 
-get_header(); ?>
+get_header();
 
-<div class="row">
-  <div class="span11 columns">
+global $sa_options;
+$sa_settings = get_option( 'sa_options', $sa_options ); ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
@@ -99,9 +99,6 @@ get_header(); ?>
 <?php endwhile; ?>
 
   </div>
-  <div class="span5 columns">
-		<?php get_sidebar(); ?>
-  </div>
+  <?php get_sidebar(); ?>
 </div>
-
 <?php get_footer(); ?>

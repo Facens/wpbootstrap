@@ -6,9 +6,16 @@
  * @subpackage wpbootstrap
  * @since wpbootstrap 0.1
  */
-?>
 
-<ul class="unstyled sidebar">
+
+global $sa_options;
+$sa_settings = get_option( 'sa_options', $sa_options );
+ 
+if ($sa_settings['sidebar_size'] > 0) : ?>
+
+<div class="span<?php echo $sa_settings['sidebar_size']; ?> columns">
+
+  <ul class="unstyled sidebar">
 
 	
 <?php
@@ -64,3 +71,6 @@
 	<?php dynamic_sidebar( 'secondary-widget-area' ); ?>
 
 </ul>
+
+</div>
+<?php endif; ?>

@@ -12,9 +12,8 @@
  * @since wpbootstrap 0.1
  */
 
-get_header(); ?>
+get_header(); 
 
-<?php
 	/* Queue the first post, that way we know
 	 * what date we're dealing with (if that is the case).
 	 *
@@ -23,10 +22,12 @@ get_header(); ?>
 	 */
 	if ( have_posts() )
 		the_post();
-?>
+
+global $sa_options;
+$sa_settings = get_option( 'sa_options', $sa_options ); ?>
 
 <div class="row">
-  <div class="span11 columns">
+  <div class="span<?php echo 16 - $sa_settings['sidebar_size'] ?> columns">
 
 			<div class="page-header">
 				<h1>
@@ -57,8 +58,6 @@ get_header(); ?>
 ?>
 
   </div>
-  <div class="span5 columns">
-		<?php get_sidebar(); ?>
-  </div>
+  <?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>

@@ -7,11 +7,14 @@
  * @since wpbootstrap 0.1
  */
 
-get_header(); ?>
+get_header();
+
+global $sa_options;
+$sa_settings = get_option( 'sa_options', $sa_options ); ?>
 
 <div class="row">
-  <div class="span11 columns">
-
+  <div class="span<?php echo 16 - $sa_settings['sidebar_size'] ?> columns">
+  
 			<div class="page-header">
 				<h1><?php
 					printf( __( 'Category Archives: %s', 'twentyten' ), '' . single_cat_title( '', false ) . '' );
@@ -31,8 +34,6 @@ get_header(); ?>
 				?>
 
   </div>
-  <div class="span5 columns">
-		<?php get_sidebar(); ?>
-  </div>
+  <?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>

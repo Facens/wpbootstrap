@@ -12,11 +12,14 @@
  * @since wpbootstrap 0.1
  */
 
-get_header(); ?>
+get_header();
+
+global $sa_options;
+$sa_settings = get_option( 'sa_options', $sa_options ); ?>
 
 <div class="row">
-  <div class="span11 columns">
-
+  <div class="span<?php echo 16 - $sa_settings['sidebar_size'] ?> columns">
+  
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 					<div class="page-header">
@@ -42,8 +45,6 @@ get_header(); ?>
 <?php endwhile; ?>
 
   </div>
-  <div class="span5 columns">
-		<?php get_sidebar(); ?>
-  </div>
+  <?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>
