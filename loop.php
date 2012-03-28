@@ -33,7 +33,7 @@
 		
 		<div class="alert-message block-message error">
 			<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'twentyten' ); ?></p>
-			<div class="alert-actions"
+			<div class="alert-actions">
 				<?php get_search_form(); ?>
 			</div>
 		</div>
