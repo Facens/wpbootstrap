@@ -4,7 +4,7 @@
 $sa_options = array(
 	'social_buttons' => false,
 	'sidebar_feed' => true,
-	'credits_footer' => true,
+	'credits' => true,
 	'compact_homepage' => false,
 	'nav_view' => 'pills',
 	'iubenda_id' => '',
@@ -101,6 +101,15 @@ function sa_theme_options_page() {
 	</p>
 	</td>
 	</tr>
+	
+	<tr valign="top"><th scope="row">Sidebar size</th>
+	<td>
+	<p>
+		<input id="sidebar_size" class="small-text" name="sa_options[sidebar_size]" type="text" value="<?php  esc_attr_e($settings['sidebar_size']); ?>" />
+		<label for="back_to_main">How many of you 16 columns are for the sidebar ? Zero delete the sidebar.</label>
+	</p>
+	</td>
+	</tr>
 
 	<tr valign="top"><th scope="row">Main navigation style</th>
 	<td>
@@ -135,8 +144,8 @@ function sa_theme_options_page() {
 	<tr valign="top"><th scope="row">Credits</th>
 	<td>
 	<p>
-		<input type="checkbox" id="credits_footer" name="sa_options[credits_footer]" value="1" <?php checked( true, $settings['credits_footer'] ); ?> />
-		<label for="credits_footer">Enable the credits on the footer</label>
+		<input type="checkbox" id="credits" name="sa_options[credits]" value="1" <?php checked( true, $settings['credits'] ); ?> />
+		<label for="credits">Enable the credits on the footer</label>
 	</p>
 	</td>
 	</tr>
@@ -164,10 +173,10 @@ function sa_validate_options( $input ) {
 	$input['social_buttons'] = ( $input['social_buttons'] == 1 ? 1 : 0 );
 
 	// If the checkbox has not been checked, we void it
-	if ( ! isset( $input['credits_footer'] ) )
-		$input['credits_footer'] = null;
+	if ( ! isset( $input['credits'] ) )
+		$input['credits'] = null;
 	// We verify if the input is a boolean value
-	$input['credits_footer'] = ( $input['credits_footer'] == 1 ? 1 : 0 );
+	$input['credits'] = ( $input['credits'] == 1 ? 1 : 0 );
 
 	// If the checkbox has not been checked, we void it
 	if ( ! isset( $input['sidebar_feed'] ) )

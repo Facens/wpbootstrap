@@ -13,9 +13,13 @@
  * @since wpbootstrap 0.1
  */
 
-get_header(); ?>
+get_header();
+
+global $sa_options;
+$sa_settings = get_option( 'sa_options', $sa_options ); ?>
+
 <div class="row">
-  <div class="span11 columns">
+  <div class="span<?php echo 16 - $sa_settings['sidebar_size'] ?> columns">
 			<?php
 			/* Run the loop to output the posts.
 			 * If you want to overload this in a child theme then include a file
@@ -24,9 +28,6 @@ get_header(); ?>
 			 get_template_part( 'loop', 'index' );
 			?>
   </div>
-  <div class="span5 columns">
-		<?php get_sidebar(); ?>
-  </div>
+  <?php get_sidebar(); ?>
 </div>
-
 <?php get_footer(); ?>

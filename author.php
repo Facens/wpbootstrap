@@ -19,10 +19,12 @@ get_header(); ?>
 	 */
 	if ( have_posts() )
 		the_post();
-?>
+		
+global $sa_options;
+$sa_settings = get_option( 'sa_options', $sa_options ); ?>
 
 <div class="row">
-  <div class="span11 columns">
+  <div class="span<?php echo 16 - $sa_settings['sidebar_size'] ?> columns">
 
 			<div class="page-header">
 				<h1><?php printf( __( 'Author Archives: %s', 'twentyten' ), "<a class='url fn n' href='" . get_author_posts_url( get_the_author_meta( 'ID' ) ) . "' title='" . esc_attr( get_the_author() ) . "' rel='me'>" . get_the_author() . "</a>" ); ?></h1>
@@ -53,8 +55,6 @@ if ( get_the_author_meta( 'description' ) ) : ?>
 ?>
 
   </div>
-  <div class="span5 columns">
-		<?php get_sidebar(); ?>
-  </div>
+  <?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>
